@@ -1,0 +1,113 @@
+
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+@include textfield.core-styles;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.main-con{
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  border: solid 1px black;
+  margin-bottom: 10px;
+  
+  display: flex;
+}
+.left-part{
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+    
+    .completed{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: black;
+    }
+}
+.right-part{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+  .delete-btn {
+    width: 24px;
+    height: 24px;
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .delete-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transform: translateY(-50%);
+  }
+.delete-btn:hover {
+  background-color: #d9363e;
+}
+

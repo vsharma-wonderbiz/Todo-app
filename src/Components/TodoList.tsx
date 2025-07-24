@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 type PropsType={
     id:string,
@@ -51,6 +51,7 @@ const TodoList=({id,text,completed,toggleTask,deletTask}:PropsType)=>{
             </div>
             <div className="right-part">
                 <div className="delete-btn" onClick={TaskDelete}></div>
+               
             </div>
         </div>
         </>

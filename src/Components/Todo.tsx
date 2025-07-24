@@ -13,7 +13,7 @@ interface TODO {
 const Todo = () => {
   const [todo, setTodo] = useState<TODO[]>([]);
 
-  // Toggle completed state of a task
+  
   const toggleTask = (id: string) => {
     setTodo(prev =>
       prev.map(todo =>
@@ -49,7 +49,7 @@ const Todo = () => {
   return (
     <>
       
-      <TodoInput onAddTask={handleAddTask} /> {/* 👈 Pass the handler */}
+      <TodoInput onAddTask={handleAddTask} /> 
 
       {todo.length===0 && <h3 style={{color:"red"}} >Please Enter a Task</h3> }
       {todo.map(e => (

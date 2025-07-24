@@ -46,7 +46,8 @@ const TodoList=({id,text,completed,toggleTask,deletTask}:PropsType)=>{
                     </svg>
                 )}
             </div>
-               <h4>{text}</h4>
+            {completed ? <h4 style={{textDecoration:"line-through"}} >{text}</h4> :<h4 >{text}</h4>}
+               
             </div>
             <div className="right-part">
                 <div className="delete-btn" onClick={TaskDelete}></div>
